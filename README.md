@@ -4,7 +4,7 @@
 
 ### Quickstart
 
-Install the package.
+Install the package and dependencies.
 
 ```
 $ npm install -g gulp-cli yo generator-politico-python-package
