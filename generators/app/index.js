@@ -18,8 +18,8 @@ module.exports = class extends Generator {
     const name = this.name;
     this.composeWith(require.resolve('../docs'), { name });
     this.composeWith(require.resolve('../environment'));
-    this.composeWith(require.resolve('../lib'), { name });
     this.composeWith(require.resolve('../package'), { name });
+    this.composeWith(require.resolve('../packaging'), { name });
     this.composeWith(require.resolve('../tests'));
   }
 };

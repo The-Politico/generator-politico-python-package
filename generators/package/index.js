@@ -14,21 +14,14 @@ module.exports = class extends Generator {
   writing() {
     const name = this.options.name;
 
-    this.fs.copy(
-      this.templatePath('gitignore'),
-      this.destinationPath('./.gitignore'));
-
-    this.fs.copy(
-      this.templatePath('LICENSE'),
-      this.destinationPath('LICENSE'));
-
-    this.fs.copy(
-      this.templatePath('Makefile'),
-      this.destinationPath('Makefile'));
+    this.fs.copyTpl(
+      this.templatePath('__init__.py'),
+      this.destinationPath(`${name}/__init__.py`),
+      { name });
 
     this.fs.copyTpl(
-      this.templatePath('setup.py'),
-      this.destinationPath('setup.py'),
+      this.templatePath('README.md'),
+      this.destinationPath('README.md'),
       { name });
   }
 };
