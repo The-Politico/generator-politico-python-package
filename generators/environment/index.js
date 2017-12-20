@@ -20,5 +20,6 @@ module.exports = class extends Generator {
     this.log(chalk.cyan('Activate your virtual environment and install requirements to begin developing:'));
     this.log(chalk.bgGreen('$ source .env'));
     this.log(chalk.bgGreen('$ pip install -r requirements.txt'));
+    this.log(chalk.cyan('Done and ready to go! 🏁'));
   }
 };
